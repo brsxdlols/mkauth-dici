@@ -1,0 +1,9 @@
+desktop.ini
+*.csv
+*.log
+*.key
+*.pem
+*.pfx
+*.p12
+config.local.php
+work/
