@@ -40,6 +40,15 @@ if (!mkauth_dici_is_authenticated()) {
     exit('Acesso negado... <a href="/admin/login.hhvm">Fazer Login</a>');
 }
 
+/* Carrega as configuracoes basicas oficiais antes do topo do MK-Auth. */
+$mkauthConfigure = dirname(__DIR__, 3) . '/include/configure.php';
+if (is_readable($mkauthConfigure)) {
+    include_once $mkauthConfigure;
+}
+if (!defined('ADMIN2URL')) {
+    define('ADMIN2URL', '/admin/');
+}
+
 $manifestPath = __DIR__ . '/manifest.json';
 $Manifest = (object) array('name' => 'Gerador de Relatório DICI – Anatel', 'version' => '10.51.1');
 if (is_readable($manifestPath)) {

@@ -12,6 +12,13 @@ curl -fsSL https://raw.githubusercontent.com/brsxdlols/mkauth-dici/main/install.
 
 O instalador baixa sempre a versão atual da branch `main`, valida o PHP, cria backup e atualiza o menu sem duplicação.
 
+## Compatibilidade com o painel MK-Auth
+
+- Carrega as configurações básicas oficiais antes de montar o cabeçalho, corrigindo a tela em branco após o login.
+- Mantém a autenticação obrigatória e o suporte a sessões antigas e atuais.
+- O instalador registra o atalho **DICI / ANATEL** na aba **Provedor**.
+- Correção validada com PHP 7.3 e 8.0; abertura autenticada confirmada no servidor.
+
 ## Correção 10.51.1
 
 - Mantém a consulta e os filtros originais do relatório DICI.
@@ -32,4 +39,4 @@ curl -fsSL https://raw.githubusercontent.com/brsxdlols/mkauth-dici/main/install.
 sh /tmp/install-mkauth-dici.sh --rollback latest
 ```
 
-Após instalar, autentique-se no MK-Auth, abra **ADDONS → DICI** e gere um arquivo de teste. Novos arquivos devem começar com os bytes `EF BB BF`.
+Após instalar, autentique-se no MK-Auth, abra **Provedor → DICI / ANATEL** e gere um arquivo de teste. Novos arquivos devem começar com os bytes `EF BB BF`.

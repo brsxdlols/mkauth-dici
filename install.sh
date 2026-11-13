@@ -85,7 +85,7 @@ awk -v begin="$BEGIN_MARKER" -v end="$END_MARKER" '
 {
     cat "$tmp/addon.js"
     printf '\n%s\n' "$BEGIN_MARKER"
-    printf '%s\n' "add_menu.opcoes('{\"plink\": \"' + minha_url + 'addons/dici/index.php\", \"ptext\": \"DICI / ANATEL\"}');"
+    printf '%s\n' "add_menu.provedor('{\"plink\": \"' + minha_url + 'addons/dici/index.php\", \"ptext\": \"DICI / ANATEL\"}');"
     printf '%s\n' "$END_MARKER"
 } > "$tmp/addon.js.new"
 cp "$tmp/addon.js.new" "$menu"
