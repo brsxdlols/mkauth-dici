@@ -40,3 +40,7 @@ sh /tmp/install-mkauth-dici.sh --rollback latest
 ```
 
 Após instalar, autentique-se no MK-Auth, abra **Provedor → DICI / ANATEL** e gere um arquivo de teste. Novos arquivos devem começar com os bytes `EF BB BF`.
+
+## Relatório de Tráfego incluído
+
+O instalador também instala o relatório em `/admin/addons/rel_trafego/` e registra **Provedor → Relatorio de Trafego**, sem duplicar atalhos. Mostra download, upload e total por período usando somente consultas à tabela RADIUS. Reutiliza a conexão oficial do MK-Auth. O backup e o rollback incluem o relatório.
